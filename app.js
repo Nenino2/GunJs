@@ -5,7 +5,6 @@ const nameDomElement = document.getElementById('name')
 const inputDomElement = document.getElementById("input")
 
 inputDomElement.addEventListener('input', () => {
-    /** @type {String} */
     const name = inputDomElement.value;
     gun.get('main').put({ name });
 })
