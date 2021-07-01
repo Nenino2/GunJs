@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "snowpack dev",
-    "build": "snowpack build",
+    "build": "snowpack build && touch ./docs/.nojekyll",
     "serve:local-signaling-server":"npx gun-cli --host 127.0.0.1"
   },
   "author": "",
