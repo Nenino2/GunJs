@@ -30,8 +30,8 @@ signupButton.addEventListener('click', () => {
 })
 
 loginButton.addEventListener('click', () => {
-    const id = signupId.value;
-    const password = signupPassword.value;
+    const id = loginId.value;
+    const password = loginPassword.value;
     user.auth(id, password)
 })
 
