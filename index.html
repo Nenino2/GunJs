@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GunJs</title>
-    <script type="module" src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <h1>GUNJS IS AWESOME</h1>
@@ -14,6 +16,22 @@
         <input id="input" type="text" placeholder="What is your name">
         <p>Your name is: <span id="name"></span></p>
     </div>
-    <hr>
+    <div>
+        <h2>Signup</h2>
+        <input id="signup-id" type="text" placeholder="Id">
+        <input id="signup-password" type="password" placeholder="Password">
+        <button id="signup-button">Signup</button>
+    </div>
+    <div>
+        <h2>Login</h2>
+        <input id="login-id" type="text" placeholder="Id">
+        <input id="login-password" type="password" placeholder="Password">
+        <button id="login-button">Login</button>
+    </div>
+    <div>
+        <h2>Secret list</h2>
+        <input id="secret-input" type="text" placeholder="Something...">
+        <p id="secret"></p>
+    </div>
 </body>
 </html>
