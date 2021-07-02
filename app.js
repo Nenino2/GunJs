@@ -10,8 +10,12 @@ const loginPassword = document.getElementById('login-password')
 const loginButton = document.getElementById('login-button')
 const secret = document.getElementById('secret');
 const secretInput = document.getElementById('secret-input')
+const receiverInput = document.getElementById('receiver-input')
+const secretButton = document.getElementById('secret-button')
 
 const user = gun.user()
+
+user.recall({sessionStorage: true})
 
 inputDomElement.addEventListener('input', () => {
     const name = inputDomElement.value;
@@ -36,11 +40,16 @@ loginButton.addEventListener('click', () => {
 })
 
 gun.on('auth', () => {
-    console.log('auth')
-    secretInput.addEventListener('input', () => {
-        user.get('message').put( secretInput.value)
-    })
-    user.get('message').on(data => {
+    alert('Auth successful')
+})
+
+secretInput.addEventListener('input', () => {
+    myRecretMessage = secretInput.value;
+    user.get('message').put(secretInput.value)
+})
+
+secretButton.addEventListener('click', () => {
+    gun.user(receiverInput.value).get('message').on(data => {
         secret.innerText = data;
     })
 })
